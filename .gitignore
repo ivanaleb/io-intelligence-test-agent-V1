@@ -1,0 +1,71 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Entornos virtuales
+.env/
+.venv/
+env/
+venv/
+ENV/
+VENV/
+
+# Archivos de configuración y entorno
+*.env
+*.env.*
+
+# Archivos de log
+*.log
+
+# Distribuciones / build
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+# Si usás PyInstaller para crear ejecutables
+*.manifest
+*.spec
+
+# Unit test / coverage
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+tox.ini
+.tox/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# VS Code / PyCharm / otros editores
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
