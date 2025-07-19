@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+iointel
+openai
+python-multipart
+python-
