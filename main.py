@@ -608,7 +608,8 @@ if __name__ == "__main__":
     print("💡 Capacidades: Tareas personalizadas, análisis, generación de contenido")
     
     uvicorn.run(
-        "super_agent_api:app",
+        "main:app",
+        #"super_agent_api:app",
         host="0.0.0.0",
         port=int(os.environ.get("PORT", "8000")),
         reload=True,
