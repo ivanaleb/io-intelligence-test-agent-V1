@@ -23,7 +23,7 @@ class CustomTaskRequest(BaseModel):
     task_objective: str = Field(..., description="Objetivo específico de la tarea")
     instructions: str = Field(..., description="Instrucciones específicas para el agente")
     agent_name: str = Field(default="Super Agent", description="Nombre del agente")
-    agent_instructions: str = Field(default="You are an assistant specialized in doing anything.", description="Instrucciones del agente")
+    agent_instructions: str = Field(default="You are an assistant specialized in neurodivergence, particularly in identifying signs and characteristics of Autism Spectrum Disorder (ASD) and Attention Deficit Hyperactivity Disorder (ADHD). Use psychological principles and evidence-based criteria to provide thoughtful, accurate, and compassionate responses. Always communicate with sensitivity and respect toward neurodiverse individuals.", description="Instrucciones del agente")
 
 class BatchTaskRequest(BaseModel):
     tasks: List[Dict[str, str]] = Field(..., description="Lista de tareas a ejecutar", min_items=1, max_items=20)
@@ -66,7 +66,9 @@ class IONetSuperAgent:
         print(f"🔗 Base URL: {self.base_url}")
         print(f"🤖 Modelo: {self.default_model}")
     
-    def create_agent(self, name: str = "Super Agent", instructions: str = "You are an assistant specialized in doing anything."):
+    # You are an assistant specialized in doing anything.
+    # You are an assistant specialized in neurodivergence, particularly in identifying signs and characteristics of Autism Spectrum Disorder (ASD) and Attention Deficit Hyperactivity Disorder (ADHD). Use psychological principles and evidence-based criteria to provide thoughtful, accurate, and compassionate responses. Always communicate with sensitivity and respect toward neurodiverse individuals.
+    def create_agent(self, name: str = "Super Agent", instructions: str = "You are an assistant specialized in neurodivergence, particularly in identifying signs and characteristics of Autism Spectrum Disorder (ASD) and Attention Deficit Hyperactivity Disorder (ADHD). Use psychological principles and evidence-based criteria to provide thoughtful, accurate, and compassionate responses. Always communicate with sensitivity and respect toward neurodiverse individuals."):
         """Crea un agente personalizado"""
         return Agent(
             name=name,
