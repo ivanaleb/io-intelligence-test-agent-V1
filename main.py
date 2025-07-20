@@ -596,22 +596,46 @@ def check_environment():
     if max_file_size:
         print(f"📁 Tamaño máximo de archivo: {max_file_size} caracteres")
 
+
 if __name__ == "__main__":
+    import os
     import uvicorn
     
     print("🚀 Iniciando Super Agent API...")
     check_environment()
     
-    print("\n📖 Documentación disponible en: http://localhost:8000/docs")
-    print("🔍 Ejemplos de uso en: http://localhost:8000/examples")
-    print("❤️  Estado de salud en: http://localhost:8000/health")
-    print("💡 Capacidades: Tareas personalizadas, análisis, generación de contenido")
+    print(f"\n📖 Documentación disponible en: http://localhost:8080/docs")
+    print(f"🔍 Ejemplos de uso en: http://localhost:8080/examples")
+    print(f"❤️  Estado de salud en: http://localhost:8080/health")
+    print(f"💡 Capacidades: Tareas personalizadas, análisis, generación de contenido")
     
     uvicorn.run(
         "main:app",
-        #"super_agent_api:app",
         host="0.0.0.0",
-        port=int(os.environ.get("PORT", "8000")),
-        reload=True,
+        port=int(os.environ.get("PORT", 8080)),
+        reload=False,
         log_level="info"
     )
+
+
+
+
+# if __name__ == "__main__":
+#     import uvicorn
+    
+#     print("🚀 Iniciando Super Agent API...")
+#     check_environment()
+    
+#     print("\n📖 Documentación disponible en: http://localhost:8000/docs")
+#     print("🔍 Ejemplos de uso en: http://localhost:8000/examples")
+#     print("❤️  Estado de salud en: http://localhost:8000/health")
+#     print("💡 Capacidades: Tareas personalizadas, análisis, generación de contenido")
+    
+#     uvicorn.run(
+#         "main:app",
+#         #"super_agent_api:app",
+#         host="0.0.0.0",
+#         port=int(os.environ.get("PORT", "8000")),
+#         reload=True,
+#         log_level="info"
+#     )
